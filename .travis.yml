@@ -4,6 +4,6 @@ before_install:
     - gem install bundler -v 2.4.22
     - docker-compose up --build -d
 script:
-    - docker-compose exec --env 'RAILS_ENV=test' web rails db:create
-    - docker-compose exec --env 'RAILS_ENV=test' web rails db:migrate
-    - docker-compose exec --env 'RAILS_ENV=test' web rails test
+    - docker-compose exec --env 'RAILS_ENV=test' web bundle exec rails db:create
+    - docker-compose exec --env 'RAILS_ENV=test' web bundle exec rails db:migrate
+    - docker-compose exec --env 'RAILS_ENV=test' web bundle exec rails test
