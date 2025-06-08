@@ -14,4 +14,8 @@ RUN gem update --system 3.2.3
 
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
+
+# ローカル設定をここで実施
+RUN bundle config set deployment 'true'
+
 RUN bundle install
