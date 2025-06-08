@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y \
 RUN gem install bundler:2.4.22
 
 WORKDIR /product-register
-COPY Gemfile Gemfile.lock /product-register
+COPY Gemfile Gemfile.lock /product-register/
 RUN bundle install
