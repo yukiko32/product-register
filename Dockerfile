@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
   postgresql-client \
   yarn \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* || true
 
 # Bundler 2をインストール
 RUN gem install bundler:2.4.22
