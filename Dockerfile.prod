@@ -4,7 +4,8 @@ RUN apt-get update && apt-get install -y \
   libpq-dev \
   nodejs \
   postgresql-client \
-  yarn
+  yarn \
+  && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /var/cache/apt/archives/partial/
 
 # Bundler 2をインストール
 RUN gem install bundler:2.4.22
