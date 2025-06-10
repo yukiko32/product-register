@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 # Bundler 2をインストール
 # RUN gem install bundler:2.4.22
+RUN gem install bundler -v 2.5.8
 
 # RubyGemsをアップデート
 # RUN gem update --system 3.5.8
