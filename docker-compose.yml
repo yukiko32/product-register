@@ -7,8 +7,6 @@ volumes:
 services:
   web:
     build: .
-    security_opt:
-      - seccomp=unconfined
     ports:
       - '3000:3000'
     volumes:
