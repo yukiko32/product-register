@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 # Bundler 2をインストール
 # RUN gem install bundler:2.4.22
 RUN gem install bundler:2.5.8
-RUN bundle _2.5.8_ install
+
 
 # RubyGemsをアップデート
 # RUN gem update --system 3.5.8
@@ -22,7 +22,7 @@ COPY Gemfile Gemfile.lock /product-register/
 # ローカル設定をここで実施
 RUN bundle config set deployment 'true'
 
-RUN bundle install
+RUN bundle _2.5.8_ install
 
 COPY . .
 CMD ["rails", "s"]
