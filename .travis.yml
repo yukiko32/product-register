@@ -1,7 +1,6 @@
 sudo: required
 services: docker
 before_install:
-    - gem install bundler -v 2.4.22
     - docker-compose up --build -d
     - docker login -u "$HEROKU_USERNAME" -p "$HEROKU_API_KEY" registry.heroku.com
 script:
