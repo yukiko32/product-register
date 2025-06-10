@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 # RUN gem install bundler:2.4.22
 
 # RubyGemsをアップデート
-RUN gem update --system 3.5.8
+# RUN gem update --system 3.5.8
 
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
