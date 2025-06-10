@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/* || true
 
 # Bundler 2をインストール
-RUN gem install bundler:2.4.22
+# RUN gem install bundler:2.4.22
 
 # RubyGemsをアップデート
-RUN gem update --system 3.2.3
+RUN gem update --system 3.5.8
 
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
